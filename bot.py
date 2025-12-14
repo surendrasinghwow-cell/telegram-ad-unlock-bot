@@ -1,7 +1,9 @@
 from telebot import TeleBot, types
 import time, random
 
-BOT_TOKEN = "${{shared.8510803619:AAG4blR0lD1A9cW2LCgyi73iE3A3V0t4U7E}}"
+BOT_TOKEN = os.getenv("8510803619:AAG4blR0lD1A9cW2LCgyi73iE3A3V0t4U7E")
+if not BOT_TOKEN:
+    raise RuntimeError("BOT_TOKEN is not set")
 GROUP_ID = -1002291113941
 ADMIN_IDS = [7408733118]
 
